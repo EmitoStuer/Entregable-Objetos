@@ -3,12 +3,14 @@ export class Camion{
     private modelo:string;
     private patente:string;
     private anioDeFabricacion:number;
+    private capacidadDeCarga :number;
 
-    constructor(marca:string,modelo:string,patente:string,anioDeFabricacion:number){
+    constructor(marca:string,modelo:string,patente:string,anioDeFabricacion:number, capacidadDeCarga:number){
         this.marca = marca;
         this.modelo = modelo;
         this.patente = patente;
         this.anioDeFabricacion = anioDeFabricacion;
+        this.capacidadDeCarga = capacidadDeCarga;
     }
     getMarca():string{
         return this.marca;
@@ -35,4 +37,10 @@ export class Camion{
         this.anioDeFabricacion=anioDeFabricacion;
     };
 
+    getCapacidadDeCarga():number{
+        return this.capacidadDeCarga;
+    };
+    setCapacidadDeCarga(capacidadDeCarga:number){
+        this.capacidadDeCarga=capacidadDeCarga;
+    };
 }
