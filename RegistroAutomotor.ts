@@ -282,7 +282,7 @@ export class RegistroAutomotor{
         }
     }
 
-    eliminarVehiculo(){
+    eliminarVehiculo():void{
         let opcionSeleccionada : number ;
         do{
         console.log(`Que tipo de Vehiculo desea eliminar  \n 1 - Auto. \n 2 - Moto. \n 3 - Camion. \n 4 - Salir`);
@@ -308,7 +308,7 @@ export class RegistroAutomotor{
         } while(opcionSeleccionada!==4);
     }
 
-    eliminarAuto(){
+    eliminarAuto():void{
         let patenteAuto: string = rls.question("Ingrese la Patente del Auto: ");
         let autoSeleccionado : Auto | undefined= this.listaAutos.find(auto => auto.getPatente() === patenteAuto);
         if (autoSeleccionado){
@@ -325,7 +325,7 @@ export class RegistroAutomotor{
         }
     }
 
-    eliminarMoto(){
+    eliminarMoto():void{
         let patenteMoto: string = rls.question("Ingrese la Patente de la Moto: ");
         let motoSeleccionada : Moto | undefined= this.listaMotos.find(moto => moto.getPatente() === patenteMoto);
         if (motoSeleccionada){
@@ -342,7 +342,7 @@ export class RegistroAutomotor{
         }
     }
 
-    eliminarCamion(){
+    eliminarCamion():void{
         let patenteCamion: string = rls.question("Ingrese la Patente del Camion: ");
         let camionSeleccionado : Camion | undefined= this.listaCamiones.find(camion => camion.getPatente() === patenteCamion);
         if (camionSeleccionado){
@@ -359,8 +359,8 @@ export class RegistroAutomotor{
         }
     }
 
-    esperarEnter(){
-        console.log("Presione Enter Para continuar")
+    esperarEnter():void{
+        console.log("Presione Enter Para continuar");
         rls.question('');
     }
 }
