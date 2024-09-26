@@ -7,6 +7,7 @@ export class RegistroAutomotor{
     private listaAutos:Auto[];
     private listaMotos:Moto[];
     private listaCamiones:Camion[];
+    
     constructor(nombre:string){
         this.nombre = nombre;
         this.listaAutos = [];
